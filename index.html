@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول وإنشاء حساب | تصميم عصري</title>
+    <!-- Google Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- زر التخصيص التفاعلي (Customization Menu) -->
+    <div class="customizer">
+        <button id="customizer-toggle" class="customizer-btn" title="تخصيص المظهر">
+            <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="customizer-menu" id="customizer-menu">
+            <h4>تخصيص المظهر</h4>
+            
+            <div class="option-row">
+                <span>الوضع:</span>
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fa-solid fa-sun" id="theme-icon"></i>
+                    <span id="theme-text">نهاري</span>
+                </button>
+            </div>
+
+            <div class="option-row">
+                <span>اللون الرئيسي:</span>
+                <div class="color-picker">
+                    <button class="color-dot active" data-color="indigo" style="background-color: #6366f1;" title="بنفسجي عصري"></button>
+                    <button class="color-dot" data-color="teal" style="background-color: #0d9488;" title="تيل هادئ"></button>
+                    <button class="color-dot" data-color="rose" style="background-color: #f43f5e;" title="وردي ناعم"></button>
+                    <button class="color-dot" data-color="sky" style="background-color: #0284c7;" title="أزرق سماوي"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الحاوية الرئيسية للتسجيل -->
+    <div class="auth-container">
+        
+        <!-- الترويسة وأزرار التبديل بين النموذجَين -->
+        <div class="auth-header">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>تطبيقي</span>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" id="login-tab">تسجيل الدخول</button>
+                <button class="tab-btn" id="signup-tab">حساب جديد</button>
+            </div>
+        </div>
+
+        <!-- 1️⃣ نموذج تسجيل الدخول (Login Form) -->
+        <form id="login-form" class="auth-form active">
+            <h2>مرحباً بعودتك! 👋</h2>
+            <p class="subtitle">سجّل دخولك للوصول إلى لوحة التحكم الخاصة بك.</p>
+
+            <div class="input-group">
+                <label for="login-email">البريد الإلكتروني</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="login-email" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <div class="label-row">
+                    <label for="login-password">كلمة المرور</label>
+                    <a href="#" class="forgot-pass">نسيت كلمة المرور؟</a>
+                </div>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">تسجيل الدخول</button>
+        </form>
+
+        <!-- 2️⃣ نموذج إنشاء حساب جديد (Sign Up Form) -->
+        <form id="signup-form" class="auth-form">
+            <h2>إنشاء حساب جديد 🚀</h2>
+            <p class="subtitle">انضم إلينا واستمتع بكل الميزات في دقائق معدودة.</p>
+
+            <div class="input-group">
+                <label for="signup-name">الاسم الكامل</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="signup-name" placeholder="أحمد محمد" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signup-email">البريد الإلكتروني</label>
+                <div class="input-wrapper">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="signup-email" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="signup-password">كلمة المرور</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="signup-password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">إنشاء الحساب</button>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
